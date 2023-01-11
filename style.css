@@ -8,7 +8,6 @@
 }
 
 * {
-  /* border: 1px solid red; */
   font-size: 62.5%;
   margin: 0;
   padding: 0;
@@ -29,6 +28,7 @@ main {
   margin: 1.6rem 0;
 }
 
+/* h 50.95 w 38.41 */
 .large {
   display: flex;
   flex-direction: column;
@@ -37,6 +37,7 @@ main {
   width: 26.6rem;
   min-height: 49.8rem;
   border-radius: 9.6px;
+  padding: 5.095rem 3.841rem;
   margin: 1.6rem 0;
 }
 
@@ -47,6 +48,7 @@ main {
   background: #2a2141;
   width: 35.771rem;
   min-height: 26.668rem;
+  padding: 2.8rem;
   border-radius: 9.6px;
   margin: 1.6rem 0;
 }
@@ -58,26 +60,27 @@ main {
   background: #2a2141;
   width: 35.771rem;
   min-height: 19.926rem;
+  padding: 2.8rem;
   border-radius: 9.6px;
   margin: 1.6rem 0;
+}
+
+.art-info-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2.8rem;
+  align-items: center;
 }
 
 .large .art-container {
   width: 18.9rem;
   height: 18.9rem;
-  margin: 5.095rem 0 2.88rem;
-}
-
-.art-info-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin: 0 0 2.88rem;
 }
 
 .art-container {
   width: 8.4rem;
   height: 8.4rem;
-  margin: 2.88rem 2.88rem 0;
   border-radius: 0.6rem;
   overflow: hidden;
 }
@@ -135,12 +138,16 @@ main {
   justify-content: center;
   align-items: center;
   margin: 2.88rem 0;
-  width: 18.96rem;
+  width: 30rem;
   height: 2.88rem;
 }
 
-.medium .controls {
-  width: 30rem;
+.large .controls {
+  width: 18.96rem;
+}
+
+.small .controls {
+  margin: 2.88rem 0 0;
 }
 
 .play {
@@ -246,14 +253,13 @@ main {
 }
 
 @media screen and (min-width: 768px) {
-  /* change layout here */
   body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-content: center;
   }
-  
+
   main {
     width: 65.6rem;
     display: grid;
@@ -264,7 +270,7 @@ main {
 
   .wrapper {
     display: grid;
-    gap: 3.2rem;
+    gap: 3.209rem;
   }
 
   .player {
