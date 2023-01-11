@@ -8,6 +8,7 @@
 }
 
 * {
+  /* border: 1px solid red; */
   font-size: 62.5%;
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@ main {
   margin: 1.6rem 0;
 }
 
-.player-large {
+.large {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +40,7 @@ main {
   margin: 1.6rem 0;
 }
 
-.player-medium {
+.medium {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +51,7 @@ main {
   margin: 1.6rem 0;
 }
 
-.player-small {
+.small {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +62,7 @@ main {
   margin: 1.6rem 0;
 }
 
-.player-large .art-container {
+.large .art-container {
   width: 18.9rem;
   height: 18.9rem;
   margin: 5.095rem 0 2.88rem;
@@ -91,7 +92,7 @@ main {
   width: 18.96rem;
 }
 
-.player-medium .info {
+.medium .info {
   display: flex;
   width: 18.72rem;
   height: 5.26rem;
@@ -104,7 +105,7 @@ main {
   margin: 0 0 0.96rem;
 }
 
-.player-medium .slider,
+.medium .slider,
 .artist {
   width: 17.1rem;
 }
@@ -138,7 +139,7 @@ main {
   height: 2.88rem;
 }
 
-.player-medium .controls {
+.medium .controls {
   width: 30rem;
 }
 
@@ -154,9 +155,9 @@ main {
   height: 1.62rem;
 }
 
-.player-medium .duration,
-.player-medium .progress-bar,
-.player-medium .progress-timer {
+.medium .duration,
+.medium .progress-bar,
+.medium .progress-timer {
   width: 30rem;
 }
 
@@ -246,10 +247,28 @@ main {
 
 @media screen and (min-width: 768px) {
   /* change layout here */
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
   main {
     width: 65.6rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 3.2rem;
+  }
+
+  .player {
+    margin: 0;
   }
 }
 
