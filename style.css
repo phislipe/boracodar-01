@@ -22,7 +22,6 @@ main {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -41,6 +40,7 @@ main {
   margin: 5.095rem 0 2.88rem;
   border-radius: 0.6rem;
   width: 18.9rem;
+  height: 18.9rem;
   overflow: hidden;
 }
 
@@ -50,35 +50,39 @@ main {
 
 .info {
   display: flex;
-  flex-direction :column;
+  flex-direction: column;
   width: 18.96rem;
 }
 
-.title {
+.slider {
   overflow: hidden;
-  text-overflow: clip ellipsis;
-  width: 100%;
-  height: 2.8rem;
+  white-space: nowrap;
+  width: 18.9rem;
   margin: 0 0 0.96rem;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #e1e1e6;
-  transition: text-indent 5s linear;
 }
 
-.title:hover {
-  text-indent: -50rem;
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: #e1e1e6;
 }
 
 .artist {
   font-size: 1.9rem;
   font-weight: 400;
+  line-height: 100%;
   color: #e1e1e6;
+  opacity: 0.7;
 }
 
 .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 2.88rem 0;
-  width: fill(18.96rem);
+  width: 18.96rem;
+  height: 2.88rem;
 }
 
 .play {
@@ -96,6 +100,8 @@ main {
 .progress-bar {
   width: 18.96rem;
   height: 0.6rem;
+  border-radius: 9.6px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -103,16 +109,15 @@ main {
   background: #d9d9d9;
   width: 100%;
   height: 100%;
-  border-radius: 9.6px;
   opacity: 0.3;
 }
 
 .progress-bar-status {
   background: #d9d9d9;
-  width: 85%;
+  opacity: 0.8;
+  width: 87%;
   height: 100%;
   border-radius: 9.6px;
-  opacity: 0.8;
   position: absolute;
   top: 0;
 }
@@ -127,6 +132,7 @@ main {
   font-size: 1.44rem;
   font-weight: 400;
   color: #c4c4cc;
+  opacity: 0.7;
   width: 100%;
   text-align: start;
 }
@@ -135,6 +141,69 @@ main {
   font-size: 1.44rem;
   font-weight: 400;
   color: #c4c4cc;
+  opacity: 0.7;
   width: 100%;
   text-align: end;
+}
+
+@media screen and (min-width: 992px) {
+  .title-extended:hover {
+    animation: slide 15s linear infinite;
+    display: inline-block;
+    cursor: default;
+  }
+
+  .artist:hover {
+    text-decoration: underline solid currentColor 0.2rem;
+    cursor: pointer;
+  }
+
+  .previous:hover,
+  .play:hover,
+  .next:hover {
+    scale: 1.15;
+    cursor: pointer;
+  }
+
+  .progress-bar:hover {
+    cursor: pointer;
+  }
+
+  .progress-bar:hover > .progress-bar-status {
+    animation: progress 10s linear infinite;
+  }
+
+  .progress-timer:hover {
+    cursor: default;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(calc(-100% + 18.9rem));
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes progress {
+    0% {
+      width: 87%;
+    }
+
+    13% {
+      width: 100%;
+    }
+
+    13.1% {
+      width: 0%;
+    }
+
+    100% {
+      width: 87%;
+    }
+  }
 }
