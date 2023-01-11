@@ -20,27 +20,64 @@ html {
 
 main {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1.6rem 0;
 }
 
-.player-default {
+.player-large {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #2a2141;
   width: 26.6rem;
-  height: 49.8rem;
+  min-height: 49.8rem;
   border-radius: 9.6px;
+  margin: 1.6rem 0;
+}
+
+.player-medium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2a2141;
+  width: 35.771rem;
+  min-height: 26.668rem;
+  border-radius: 9.6px;
+  margin: 1.6rem 0;
+}
+
+.player-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2a2141;
+  width: 35.771rem;
+  min-height: 19.926rem;
+  border-radius: 9.6px;
+  margin: 1.6rem 0;
+}
+
+.player-large .art-container {
+  width: 18.9rem;
+  height: 18.9rem;
+  margin: 5.095rem 0 2.88rem;
+}
+
+.art-info-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .art-container {
-  margin: 5.095rem 0 2.88rem;
+  width: 8.4rem;
+  height: 8.4rem;
+  margin: 2.88rem 2.88rem 0;
   border-radius: 0.6rem;
-  width: 18.9rem;
-  height: 18.9rem;
   overflow: hidden;
 }
 
@@ -54,6 +91,12 @@ main {
   width: 18.96rem;
 }
 
+.player-medium .info {
+  display: flex;
+  width: 18.72rem;
+  height: 5.26rem;
+}
+
 .slider {
   overflow: hidden;
   white-space: nowrap;
@@ -61,11 +104,21 @@ main {
   margin: 0 0 0.96rem;
 }
 
+.player-medium .slider,
+.artist {
+  width: 17.1rem;
+}
+
 .title {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 100%;
   color: #e1e1e6;
+}
+
+.title-extended {
+  animation: slide 15s linear infinite;
+  display: inline-block;
 }
 
 .artist {
@@ -85,6 +138,10 @@ main {
   height: 2.88rem;
 }
 
+.player-medium .controls {
+  width: 30rem;
+}
+
 .play {
   margin: 0 5.67rem 0;
   width: 1.8rem;
@@ -95,6 +152,12 @@ main {
 .next {
   width: 2.7rem;
   height: 1.62rem;
+}
+
+.player-medium .duration,
+.player-medium .progress-bar,
+.player-medium .progress-timer {
+  width: 30rem;
 }
 
 .progress-bar {
@@ -147,10 +210,13 @@ main {
 }
 
 @media screen and (min-width: 992px) {
+  .title {
+    cursor: default;
+  }
+
   .title-extended:hover {
     animation: slide 15s linear infinite;
     display: inline-block;
-    cursor: default;
   }
 
   .artist:hover {
@@ -176,34 +242,43 @@ main {
   .progress-timer:hover {
     cursor: default;
   }
+}
 
-  @keyframes slide {
-    0% {
-      transform: translateX(0%);
-    }
-    50% {
-      transform: translateX(calc(-100% + 18.9rem));
-    }
-    100% {
-      transform: translateX(0%);
-    }
+@media screen and (min-width: 768px) {
+  /* change layout here */
+  main {
+    width: 65.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes slide {
+  10% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(calc(-100% + 18.9rem));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 87%;
   }
 
-  @keyframes progress {
-    0% {
-      width: 87%;
-    }
+  13% {
+    width: 100%;
+  }
 
-    13% {
-      width: 100%;
-    }
+  13.1% {
+    width: 0%;
+  }
 
-    13.1% {
-      width: 0%;
-    }
-
-    100% {
-      width: 87%;
-    }
+  100% {
+    width: 87%;
   }
 }
