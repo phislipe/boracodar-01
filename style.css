@@ -1,6 +1,21 @@
 :root {
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
   font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
   font-family: "Roboto", sans-serif;
+  background: #0f0d13;
 }
 
 main {
@@ -22,24 +37,37 @@ main {
   border-radius: 9.6px;
 }
 
-.art {
-  width: 18.9rem;
-  height: 18.9rem;
-  border-radius: 0.6rem;
+.art-container {
   margin: 5.095rem 0 2.88rem;
+  border-radius: 0.6rem;
+  width: 18.9rem;
+  overflow: hidden;
+}
+
+.art {
+  width: 100%;
 }
 
 .info {
   display: flex;
-  flex-direction: column;
+  flex-direction :column;
   width: 18.96rem;
 }
 
 .title {
+  overflow: hidden;
+  text-overflow: clip ellipsis;
+  width: 100%;
+  height: 2.8rem;
+  margin: 0 0 0.96rem;
   font-size: 2.4rem;
   font-weight: 700;
   color: #e1e1e6;
-  margin: 0 0 0.96rem;
+  transition: text-indent 5s linear;
+}
+
+.title:hover {
+  text-indent: -50rem;
 }
 
 .artist {
@@ -49,8 +77,8 @@ main {
 }
 
 .controls {
-  width: fill(18.96rem);
   margin: 2.88rem 0;
+  width: fill(18.96rem);
 }
 
 .play {
@@ -59,7 +87,8 @@ main {
   height: 2.07rem;
 }
 
-.previous, .next {
+.previous,
+.next {
   width: 2.7rem;
   height: 1.62rem;
 }
@@ -72,23 +101,23 @@ main {
 
 .progress-bar-background {
   background: #d9d9d9;
-  opacity: 0.3;
   width: 100%;
   height: 100%;
   border-radius: 9.6px;
+  opacity: 0.3;
 }
 
 .progress-bar-status {
   background: #d9d9d9;
-  opacity: 0.8;
   width: 85%;
   height: 100%;
   border-radius: 9.6px;
+  opacity: 0.8;
   position: absolute;
   top: 0;
 }
 
-.duration {
+.progress-timer {
   display: flex;
   width: 18.96rem;
   margin: 0.96rem 0 0;
