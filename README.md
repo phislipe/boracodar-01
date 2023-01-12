@@ -1,6 +1,6 @@
-# #boraCodar - Week #01 Challenge - Music Player
+# #boraCodar - Challenge #01 - Music Player
 
-> [Week #01](https://www.figma.com/community/file/1195050524500542670) challenge from **[#boraCodar](https://boracodar.dev/)** by Rocketseat
+> [Challenge #01](https://www.figma.com/community/file/1195050524500542670) from **[#boraCodar](https://boracodar.dev/)** by Rocketseat
 
 <p align="center">
   <img src="./assets/screenshot.png">
@@ -14,7 +14,7 @@
 
 ## My process
 
-Great challenge! Learned a lot about CSS `grid` with this project. After some research and trial and error, I managed to get it all working.
+Learned a lot about CSS `grid` with this project. After some research and trial and error, I managed to get it all working.
 
 Decided to go a step further and added some **hover animations**, a **slide animation** to the music title, and a **progress bar animation**, all with **CSS only**.
 
