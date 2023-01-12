@@ -33,7 +33,7 @@ Decided to go a step further and added some **hover animations**, a **slide anim
 
 ### Links
 
-- Live Site URL: [https://phislipe.github.io/boracodar-week1/](https://phislipe.github.io/boracodar-week1/)
+- Live Site URL: [https://phislipe.github.io/boracodar-01/](https://phislipe.github.io/boracodar-01/)
 
 ## Author
 
