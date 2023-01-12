@@ -22,8 +22,7 @@ Decided to go a step further and added some **hover animations**, a **slide anim
   <img src="./assets/preview.gif">
 </p>
 
-<p 
-  style="text-align: center; font-style: italic;">
+<p align="center">
   Disclaimer: This is not a functional music player, only a visual mockup.
 </p>
 
