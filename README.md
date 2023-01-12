@@ -1,8 +1,10 @@
-# #boraCodar (2023) - Week #01 Challenge - Music Player
+# #boraCodar - Week #01 Challenge - Music Player
 
-> Week #01 challenge from **[#boraCodar](https://boracodar.dev/)** by Rocketseat
+> [Week #01](https://www.figma.com/community/file/1195050524500542670) challenge from **[#boraCodar](https://boracodar.dev/)** by Rocketseat
 
-![Webpage preview gif](./assets/screenshot.png)
+<p align="center">
+  <img src="./assets/screenshot.png">
+</p>
 
 ## The challenge
 
@@ -14,13 +16,11 @@
 
 Great challenge! Learned a lot about CSS `grid` with this project. After some research and trial and error, I managed to get it all working.
 
-Decided to go a step further and added some hover animations, a slide animation to the music title, and a progress bar animation, all with CSS only.
+Decided to go a step further and added some **hover animations**, a **slide animation** to the music title, and a **progress bar animation**, all with **CSS only**.
 
-<img 
-  style="display: block; margin: 0 auto;"
-  src="./assets/preview.gif" 
-  alt="Webpage preview gif">
-</img>
+<p align="center">
+  <img src="./assets/preview.gif">
+</p>
 
 <p 
   style="text-align: center; font-style: italic;">
@@ -34,7 +34,7 @@ Decided to go a step further and added some hover animations, a slide animation 
 
 ### Links
 
-- Live Site URL: [https://phislipe.github.io/boracodar-desafio1/](https://phislipe.github.io/boracodar-desafio1/)
+- Live Site URL: [https://phislipe.github.io/boracodar-week1/](https://phislipe.github.io/boracodar-week1/)
 
 ## Author
 
