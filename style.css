@@ -8,6 +8,7 @@
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -17,66 +18,54 @@ html {
 
 main {
   width: 100vw;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1.6rem 0;
+  display: grid;
+  grid-template-areas:
+    "A"
+    "B"
+    "C";
+  gap: 3.2rem;
+  justify-items: center;
+  margin: 3.2rem 0;
   user-select: none;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-rows: auto;
+.player {
+  background: #2a2141;
+  display: flex;
+  flex-direction: column;
+  width: 35.771rem;
+  padding: 2.88rem;
+  border-radius: 9.6px;
 }
 
 .player-large {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #2a2141;
+  grid-area: A;
   width: 26.6rem;
-  min-height: 49.8rem;
-  border-radius: 9.6px;
+  height: 49.8rem;
   padding: 5.095rem 3.841rem;
-  margin: 1.6rem 0;
 }
 
 .player-medium {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #2a2141;
-  width: 35.771rem;
-  min-height: 26.668rem;
-  padding: 2.8rem;
-  border-radius: 9.6px;
-  margin: 1.6rem 0;
+  grid-area: B;
+  height: 26.668rem;
 }
 
 .player-small {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #2a2141;
-  width: 35.771rem;
-  min-height: 19.926rem;
-  padding: 2.8rem;
-  border-radius: 9.6px;
-  margin: 1.6rem 0;
+  grid-area: C;
+  height: 19.926rem;
 }
 
 .art-info-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 2.8rem;
+  gap: 2.88rem;
   align-items: center;
+  width: 30.01rem;
 }
 
 .player-large .art-container {
-  width: 18.9rem;
-  height: 18.9rem;
+  width: 18.96rem;
+  height: 18.96rem;
   margin: 0 0 2.88rem;
 }
 
@@ -91,28 +80,23 @@ main {
   width: 100%;
 }
 
-.info {
+.player .info {
   display: flex;
   flex-direction: column;
-  width: 18.96rem;
-}
-
-.player-medium .info {
-  display: flex;
+  justify-content: space-between;
   width: 18.72rem;
   height: 5.26rem;
+}
+
+.player-large .info {
+  width: 18.96rem;
 }
 
 .slider {
   overflow: hidden;
   white-space: nowrap;
-  width: 18.9rem;
+  width: 18.96rem;
   margin: 0 0 0.96rem;
-}
-
-.player-medium .slider,
-.artist {
-  width: 17.1rem;
 }
 
 .title {
@@ -139,17 +123,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2.88rem 0;
+  margin: 2.88rem 0 0;
   width: 30rem;
   height: 2.88rem;
 }
 
 .player-large .controls {
   width: 18.96rem;
-}
-
-.player-small .controls {
-  margin: 2.88rem 0 0;
 }
 
 .play {
@@ -164,6 +144,11 @@ main {
   height: 1.62rem;
 }
 
+.duration {
+  width: 18.96rem;
+  margin: 2.88rem 0 0;
+}
+
 .player-medium .duration,
 .player-medium .progress-bar,
 .player-medium .progress-timer {
@@ -171,18 +156,11 @@ main {
 }
 
 .progress-bar {
-  width: 18.96rem;
+  background: #5e586f;
+  width: 100%;
   height: 0.6rem;
   border-radius: 9.6px;
   overflow: hidden;
-  position: relative;
-}
-
-.progress-bar-background {
-  background: #d9d9d9;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
 }
 
 .progress-bar-status {
@@ -191,32 +169,21 @@ main {
   width: 87%;
   height: 100%;
   border-radius: 9.6px;
-  position: absolute;
-  top: 0;
 }
 
 .progress-timer {
   display: flex;
+  justify-content: space-between;
   width: 18.96rem;
   margin: 0.96rem 0 0;
 }
 
-.song-start {
+.progress-timer span {
   font-size: 1.44rem;
   font-weight: 400;
   color: #c4c4cc;
   opacity: 0.7;
-  width: 100%;
-  text-align: start;
-}
-
-.song-end {
-  font-size: 1.44rem;
-  font-weight: 400;
-  color: #c4c4cc;
-  opacity: 0.7;
-  width: 100%;
-  text-align: end;
+  width: fit-content;
 }
 
 @media screen and (min-width: 992px) {
@@ -224,9 +191,6 @@ main {
   .artist:hover {
     text-decoration: underline solid currentColor 0.2rem;
     cursor: pointer;
-  }
-
-  .controls {
   }
 
   .previous:hover,
@@ -255,20 +219,24 @@ main {
   }
 
   main {
-    width: 65.6rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "A B"
+      "A C";
     gap: 3.2rem;
-    margin: 0;
+    place-content: center;
   }
 
-  .wrapper {
-    display: grid;
-    gap: 3.209rem;
+  .player-large {
+    grid-area: A;
   }
 
-  .player {
-    margin: 0;
+  .player-medium {
+    grid-area: B;
+  }
+
+  .player-small {
+    grid-area: C;
   }
 }
 
