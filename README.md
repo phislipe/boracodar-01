@@ -7,7 +7,7 @@
 </p>
 
 <h3 align="center">
-Music Player 🎵
+  Music Player 🎵
 </h3>
 
 <div align="center">
@@ -33,7 +33,6 @@ Music Player 🎵
 <h3>🧪 Built with</h3>
 
 - HTML
-
 - CSS
 
 <h3>🔗 Links</h3>
