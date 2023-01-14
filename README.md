@@ -16,19 +16,16 @@
 
 <h2>📋 The challenge</h2>
 
-[pt-BR] Desenvolva o player conforme especificado utilizando as tecnologias da sua preferência. Você pode adicionar outros detalhes, como animações.
+The challenge was to build the player as specified <a href="https://www.figma.com/community/file/1195050524500542670">here</a>, using any preferred technologies.
 
-[en] Build the player as specified using your preferred technologies. You can add other details like animations.
+- The focus was on recreating the visuals, no functionality was required
+- You could add animations and other details
 
 <br>
 
 <div align="center">
   <img src="./assets/preview.gif" alt="Animated music player">
 </div>
-
-<p align="center">
-  <i>Disclaimer: This is not a functional music player, only a visual mockup.</i>
-</p>
 
 <h3>🧪 Built with</h3>
 
