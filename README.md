@@ -3,7 +3,8 @@
 </h1>
 
 <p align="center">
-  <a href="https://www.figma.com/community/file/1195050524500542670">Week #01</a> challenge from <a href="https://boracodar.dev/">#boraCodar</a> by <a href="https://www.rocketseat.com.br/">Rocketseat</a></p>
+  <a href="https://www.figma.com/community/file/1195050524500542670">Week #01</a> challenge from <a href="https://boracodar.dev/">#boraCodar</a> by <a href="https://www.rocketseat.com.br/">Rocketseat</a>
+</p>
 
 <h3 align="center">
 Music Player 🎵
@@ -19,6 +20,8 @@ Music Player 🎵
 
 [en] Build the player as specified using your preferred technologies. You can add other details like animations.
 
+<br>
+
 <div align="center">
   <img src="./assets/preview.gif" alt="Animated music player">
 </div>
@@ -27,13 +30,11 @@ Music Player 🎵
   <i>Disclaimer: This is not a functional music player, only a visual mockup.</i>
 </p>
 
-
 <h3>🧪 Built with</h3>
 
 - HTML
 
 - CSS
-
 
 <h3>🔗 Links</h3>
 
