@@ -132,16 +132,20 @@ main {
   width: 18.96rem;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .play {
   margin: 0 5.67rem 0;
-  width: 1.8rem;
-  height: 2.07rem;
 }
 
 .previous,
+.play,
 .next {
-  width: 2.7rem;
-  height: 1.62rem;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
 .duration {
@@ -193,11 +197,11 @@ main {
     cursor: pointer;
   }
 
-  .previous:hover,
-  .play:hover,
-  .next:hover {
+  .previous:hover svg,
+  .play:hover svg,
+  .next:hover svg {
+    transition: all 100ms ease;
     scale: 1.15;
-    transition: all 100ms ease-in-out;
     cursor: pointer;
   }
 
